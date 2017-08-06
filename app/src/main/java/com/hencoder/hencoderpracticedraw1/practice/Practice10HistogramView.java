@@ -52,7 +52,6 @@ public class Practice10HistogramView extends View {
         canvas.drawRect(1200, 580, 1300, 600, paint);
 
         paint.setColor(Color.WHITE);
-        paint.reset();
         paint.setTextSize(80);
         canvas.drawText("直方图", 600, 750,  paint);
     }

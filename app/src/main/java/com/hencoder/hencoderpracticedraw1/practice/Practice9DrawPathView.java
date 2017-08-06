@@ -32,17 +32,19 @@ public class Practice9DrawPathView extends View {
 
 //        练习内容：使用 canvas.drawPath() 方法画心形
 
-        @SuppressLint("DrawAllocation")
-        Path path = new Path();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            @SuppressLint("DrawAllocation")
+            Path path = new Path();
             path.addArc(400, 400, 600, 600, 150, 210);
             path.addArc(600, 400, 800, 600, 180, 210);
             path.lineTo(600, 750);
             path.lineTo(410, 545);
+
             Paint paint = new Paint();
             paint.setColor(Color.RED);
             paint.setAntiAlias(true);
             paint.setStyle(Paint.Style.FILL);
+
             canvas.drawPath(path, paint);
         }
     }
